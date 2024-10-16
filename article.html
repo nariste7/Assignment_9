@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <h1>Weazel News</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Articles</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <script>
+                document.querySelector('.hamburger').addEventListener('click', function() {
+                    document.querySelector('.nav-links').classList.toggle('active');
+                });
+            </script>
+        </nav>
+    </header>
+
+    <!-- Article 1 Section -->
+    <article class="news-article">
+        <header class="article-header">
+            <h2>Citizens Are Randomly Exploding!</h2>
+            <p>By Marcus Banks | 10/16/2027</p>
+        </header>
+        <section class="article-content">
+            <h3>Mysterious Spontaneous Combustions Baffle Authorities</h3>
+            <p>In a bizarre and alarming series of incidents, random citizens around the world are reportedly combusting spontaneously without any apparent cause. Authorities have confirmed multiple cases in different countries, where victims were seen suddenly engulfed in flames, with no external sources of fire.</p>
+            <p>Eyewitness accounts describe the occurrences as quick and intense, with some suggesting that victims appear completely fine one moment and ablaze the next. Medical experts are stumped, as there is no known medical condition that could explain this phenomenon. The rapid escalation of incidents has sparked public concern and widespread fear.</p>
+            <p>Governments are urging calm and have initiated investigations with teams of scientists and experts from various fields, hoping to uncover a cause. "This is something we’ve never encountered before," said Dr. Melissa Carter, a leading expert on combustion science. "We're exploring all possibilities, from unknown environmental factors to unprecedented biological conditions."</p>
+            <p>While the cause remains a mystery, public officials have advised citizens to remain vigilant and report any unusual symptoms or occurrences to local authorities.</p>
+            <div class="photo">
+                <img src="images/NewsPic1.jpg" alt="The Krusty Krab Exploding. No one was injured.">
+                <figcaption>The Krusty Krab Exploding. No one was injured.</figcaption>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <section class="advertisement">
+                <h3>AdoptKittens.com</h3>
+                <p>Find your perfect kitten companion today.</p>
+            </section>
+        </aside>
+    </article>
+
+    <!-- Article 2 Section -->
+    <article class="news-article">
+        <header class="article-header">
+            <h2>California vs. Florida</h2>
+            <p>By Iggy Roswell | 10/8/2027</p>
+        </header>
+        <section class="article-content">
+            <h3>Tensions Rise as Florida and California Clash Over Environmental Policies</h3>
+            <p>Tensions between Florida and California have escalated over opposing environmental policies, threatening interstate cooperation. California Governor Sarah Alvarez’s strict climate legislation sparked backlash from Florida’s Governor David Reynolds, who criticized the measures as harmful to economic growth.</p>
+            <p>In response, Florida introduced incentives for businesses to relocate from California, prompting lawsuits from the West Coast state over environmental concerns. As the conflict grows, businesses are caught in the middle, and experts worry it could lead to broader economic disruptions if left unresolved.</p>
+            <div class="photo">
+                <img src="images/NewsPic4.jpg" alt="California vs. Florida">
+                <figcaption>California vs. Florida</figcaption>
+            </div>
+        </section>
+    </article>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Weazel News. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .photo-gallery .photo {
+            display: none;
+        }
+        .photo-gallery .photo.active {
+            display: block;
+        }
+        .gallery.controls {
+            margin-bottom: 20px;
+        }
+        .gallery.controls button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weazel News</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <script>
+                document.querySelector('.hamburger').addEventListener('click', function() {
+                document.querySelector('nav ul').classList.toggle('active');
+                });
+            </script>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Articles</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="photo-gallery">
+        <div class="gallery controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <div class="photo active"><img src="images/NewsPic5.jpg" alt="The Krusty Krab Exploding. No one was injured."></div>
+        <div class="photo"><img src="images/NewsPic2.jpg" alt="Images of a citizen exploding"></div>
+        <div class="photo"><img src="images/NewsPic3.jpg" alt="The Latest random death by combustion."></div>
+        <div class="photo"><img src="images/NewsPic4.jpg" alt="California vs. Florida"></div>
+    </main>
+
+    <script>
+        const photos = document.querySelectorAll('.photo');
+        let currentPhotoIndex = 0;
+
+        // Function to show the current photo
+        function showPhoto(index) {
+            photos.forEach((photo, i) => {
+                photo.classList.remove('active');
+                if (i === index) {
+                    photo.classList.add('active');
+                }
+            });
+        }
+
+        // Event listeners for navigation buttons
+        document.getElementById('prev').addEventListener('click', function() {
+            currentPhotoIndex = (currentPhotoIndex > 0) ? currentPhotoIndex - 1 : photos.length - 1;
+            showPhoto(currentPhotoIndex);
+        });
+
+        document.getElementById('next').addEventListener('click', function() {
+            currentPhotoIndex = (currentPhotoIndex < photos.length - 1) ? currentPhotoIndex + 1 : 0;
+            showPhoto(currentPhotoIndex);
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Weazel News. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

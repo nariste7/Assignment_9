@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Added styles for the hamburger menu */
+        .hamburger {
+            cursor: pointer;
+            font-size: 24px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        /* Styling for navigation menu */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none; /* Hide menu by default */
+        }
+
+        nav ul.active {
+            display: block; /* Show menu when active */
+        }
+
+        nav ul li {
+            margin: 5px 0;
+        }
+
+        /* Additional styling for responsive design */
+        @media (min-width: 768px) {
+            nav ul {
+                display: flex; /* Show menu on larger screens */
+            }
+            .hamburger {
+                display: none; /* Hide hamburger icon on larger screens */
+            }
+            nav ul li {
+                margin: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weazel News</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Articles</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured article">
+            <h2>Featured Article</h2>
+            <!--Article Items Here-->
+            <h2>Mysterious Spontaneous Combustions Baffle Authorities</h2>
+            <div class="photo">
+                <img src="images/NewsPic3.jpg" alt="The Krusty Krab Exploding. No one was injured.">
+            </div>
+        </section>
+
+        <section class="latest news">
+            <h2>Latest News</h2>
+            <!--News Items Here-->
+            <h2>Tensions Rise as Florida and California Clash Over Environmental Policies</h2>
+            <div class="photo">
+                <img src="images/NewsPic4.jpg" alt="FL vs. CA">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us at WeazelNews@gmail.com</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
